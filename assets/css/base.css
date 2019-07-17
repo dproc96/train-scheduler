@@ -1,0 +1,48 @@
+body {
+    background-color: #AED3F2;
+    font-family: 'Oswald', sans-serif;
+}
+
+main {
+    background-color: #BF0404;
+    color: #eeeeee;
+    text-align: center;
+    max-width: 960px;
+    width: 90%;
+    margin: 30px auto;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, .4)
+}
+
+table {
+    color: #BF0404;
+    background-color: #eeeeee;
+    width: 450px;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, .4)
+}
+
+table * {
+    padding: 10px;
+}
+
+th, td {
+    border-bottom: #BF0404 2px solid;
+}
+
+input {
+    width: 150px;
+    padding: 5px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}

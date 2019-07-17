@@ -1,0 +1,20 @@
+.user-input {
+    text-align: left;
+}
+
+.user-input * {
+    display: block;
+    margin: 5px;
+}
+
+#input-container {
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    color: #BF0404;
+    background-color: #eeeeee;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, .4);
+    width: 340px;
+}

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Scheduler</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
@@ -18,11 +20,9 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Get Out Transit Train Schedule</h1>
-    </header>
     <main>
-        <p></p>
+        <h1>Get Out Transit Train Schedule</h1>
+        <p>Welcome to Get Out Transit, below you will see the next departure time of all of our trains. Do you know one of our trains that you don't see on this schedule? Add it below! We trust our customers to accurately add our trains and only our trains to this schedule.</p>
         <table>
             <tr>
                 <th>From</th>
@@ -34,17 +34,23 @@
 
             </tbody>
         </table>
-        <label for="">From</label>
-        <input id="from" type="text">
-        <label for="">To</label>
-        <input id="to" type="text">
-        <label for="">First Departure</label>
-        <input id="first-departure" type="time">
-        <label for="">Last Departure</label>
-        <input id="last-departure" type="time">
-        <label for="">Frequency (minutes)</label>
-        <input id="frequency" type="number">
-        <button id="add-train">Add Train To Schedule</button>
+        <div id="input-container">
+            <div class="user-input">
+                <label for="">From</label>
+                <input id="from" type="text">
+                <label for="">To</label>
+                <input id="to" type="text">
+                <label for="">First Departure</label>
+                <input id="first-departure" type="time">
+            </div>
+            <div class="user-input">
+                <label for="">Last Departure</label>
+                <input id="last-departure" type="time">
+                <label for="">Frequency (minutes)</label>
+                <input id="frequency" type="number">
+                <button id="add-train">Add Train To Schedule</button>
+            </div>
+        </div>
     </main>
 
     <script src="assets/javascript/logic.js"></script>
