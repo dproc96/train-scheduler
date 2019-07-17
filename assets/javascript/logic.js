@@ -22,10 +22,10 @@ function addTrainToSchedule (input) {
     tr.append(tdTo);
     let timeData = calculateNextTrain(input.firstTrainTime, input.lastTrainTime, input.frequency);
     let tdNextTrainTime = $("<td>");
-    tdNextTrainTime.text(timeData.time.format("h:ss A"));
+    tdNextTrainTime.text(timeData.time.format("h:mm A"));
     tr.append(tdNextTrainTime);
     let tdNextTrainTimeUntil = $("<td>");
-    tdNextTrainTimeUntil.text(timeData.timeUntil);
+    tdNextTrainTimeUntil.text(timeData.timeUntil + " minutes");
     tr.append(tdNextTrainTimeUntil);
     $("#table").append(tr);
 }
@@ -62,6 +62,20 @@ function calculateNextTrain(first, last, frequency) {
     return timeData
 }
 
+function pullTrains() {
+    database.ref().once("value").then(function(snapshot) {
+        console.log(snapshot.val())
+        snapshot.forEach(function(child) {
+            addTrainToSchedule(child.val())
+        })
+    })
+}
+
+pullTrains()
+setInterval(function() {
+    $("#table").empty();
+    pullTrains();
+}, 60000);
 
 
 $(document).ready(function() {
